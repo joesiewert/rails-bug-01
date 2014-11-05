@@ -1,7 +1,7 @@
 class QuotesController < ApplicationController
 
   def index
-    @quotes = Quote.all
+    @quotes = Quote.order(created_at: :desc)
   end
 
 end
